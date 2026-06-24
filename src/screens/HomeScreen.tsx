@@ -98,7 +98,7 @@ export const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
       <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
 
       {/* Enhanced Header with Shadow and Icons */}
@@ -149,7 +149,7 @@ export const HomeScreen = () => {
       </Animated.View>
 
       {activeOverlay && <FullScreenOverlay block={activeOverlay} />}
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight || 24) + 10 : 10,
+    paddingTop: (StatusBar.currentHeight || 11),
     paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#F0F0F5',
