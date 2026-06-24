@@ -1,5 +1,5 @@
 import React, { useMemo, useCallback, useRef } from "react";
-import { View, SafeAreaView, Animated, StyleSheet, StatusBar, Text, ScrollView } from "react-native";
+import { View, SafeAreaView, Animated, StyleSheet, StatusBar, Text, ScrollView, Platform } from "react-native";
 import { FlashList } from "@shopify/flash-list";
 import Icon from '@expo/vector-icons/Ionicons';
 import { mockHomepagePayload } from "../data/mockHomepagePayload";
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    paddingTop: 10,
+    paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight || 24) + 10 : 10,
     paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#F0F0F5',
