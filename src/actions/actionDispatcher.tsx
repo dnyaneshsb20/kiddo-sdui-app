@@ -10,9 +10,11 @@ const actionHandlers: Record<ActionType, ActionHandler> = {
   },
   APPLY_MYSTERY_GIFT_COUPON: (payload) => {
     if (__DEV__) console.log("Applied coupon:", payload.code);
+    if (payload.id) useCartStore.getState().addToCart(payload.id as string);
   },
   BOOK_EVENT: (payload) => {
     if (__DEV__) console.log("Booked event:", payload.id);
+    if (payload.id) useCartStore.getState().addToCart(payload.id as string);
   },
 };
 

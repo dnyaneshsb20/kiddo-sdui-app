@@ -64,7 +64,7 @@ export const mockCampaigns: Record<string, CampaignConfig> = {
       contextTag: "carnival_specials",
       items: [
         { id: "mg_p1", name: "Mystery Box Small", imageUrl: "https://dummyimage.com/150/000/fff", price: 199, action: { type: "ADD_TO_CART", payload: { id: "mg_p1" } } },
-        { id: "mg_p2", name: "Mystery Gift Coupon", imageUrl: "https://dummyimage.com/150/000/fff", price: 99, action: { type: "APPLY_MYSTERY_GIFT_COUPON", payload: { code: "CARNIVAL20" } } },
+        { id: "mg_p2", name: "Mystery Gift Coupon", imageUrl: "https://dummyimage.com/150/000/fff", price: 99, action: { type: "APPLY_MYSTERY_GIFT_COUPON", payload: { id: "mg_p2", code: "CARNIVAL20" } } },
       ],
     },
   },

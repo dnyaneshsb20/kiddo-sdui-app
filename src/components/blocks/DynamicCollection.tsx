@@ -7,7 +7,7 @@ import { ProductCard } from "../ui/ProductCard";
 const TypedFlashList = FlashList as any;
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 48) / 2;
-const EXACT_HEIGHT = (CARD_WIDTH * 1.1) + 155; // Matches the dynamic height of ProductCard
+const EXACT_HEIGHT = (CARD_WIDTH * 1.1) + 190; // Full ProductCard height: image + details + button + margins
 
 const DynamicCollectionComponent = ({ block }: { block: DynamicCollectionBlock }) => {
   const renderItem = useCallback(({ item }: { item: ProductItem }) => {
